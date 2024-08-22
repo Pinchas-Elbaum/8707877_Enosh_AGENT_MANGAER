@@ -1,4 +1,5 @@
 
+using AgentRest.Service;
 using AgentsApi.Data;
 
 namespace AgentRest
@@ -16,7 +17,8 @@ namespace AgentRest
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<ApplicationDbContext>();
-
+            builder.Services.AddScoped<IAgentService, AgentService>();
+            builder.Services.AddScoped<ITargetService, TargetService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

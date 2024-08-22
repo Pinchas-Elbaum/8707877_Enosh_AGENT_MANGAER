@@ -19,6 +19,6 @@ namespace AgentRest.Models
         public double TimeLeft {  get; set; }  
         public DateTime ActualExecutionTime {  get; set; }  
         public MissionStatus Status { get; set; }   
-
+       
     }
 }

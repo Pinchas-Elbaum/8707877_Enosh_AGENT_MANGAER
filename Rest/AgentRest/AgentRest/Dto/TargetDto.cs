@@ -1,4 +1,4 @@
-﻿namespace AgentRest.Dto
+﻿    namespace AgentRest.Dto
 {
     public class TargetDto
     {
