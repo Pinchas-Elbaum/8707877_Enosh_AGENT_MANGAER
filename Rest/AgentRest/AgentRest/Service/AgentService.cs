@@ -26,7 +26,7 @@ namespace AgentRest.Service
         {
             AgentModel newAgent = new AgentModel();
             newAgent.NickName = agent.Nickname;
-            newAgent.Image = agent.Photo_url;
+            newAgent.Image = agent.PhotoUrl;
 
             await context.AddAsync(newAgent);
             await context.SaveChangesAsync();
@@ -63,10 +63,20 @@ namespace AgentRest.Service
         public async Task<AgentModel?> Move(int id, DirectionDto direction)
         {
             var agent = await GetAgentAsync(id);
+            if (agent == null)
+            {
+                return null;
+            }
+
+            if (agent.Status == AgentStatus.Activity)
+            {
+                throw new InvalidOperationException("Status Agent: Activity");
+            }
             agent.X += location[direction.Direction].Item1;
             agent.Y += location[direction.Direction].Item2;
             await context.SaveChangesAsync();
             return agent;
+            
         }
     }
 }

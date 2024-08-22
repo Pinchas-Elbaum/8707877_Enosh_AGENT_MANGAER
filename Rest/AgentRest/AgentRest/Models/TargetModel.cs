@@ -2,8 +2,9 @@
 {
     public enum TargetStatus
     {
-        live,
+        Live,
         Eliminated,
+        Persecuted
     }
 
     public class TargetModel
@@ -14,6 +15,6 @@
         public string position { get; set; }
         public int x { get; set; }
         public int y { get; set; }
-        public TargetStatus status { get; set; }
+        public TargetStatus Status { get; set; }
     }
 }

@@ -9,9 +9,9 @@ namespace AgentRest.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AgentController(IAgentService agentService) : ControllerBase
+    public class agentsController(IAgentService agentService) : ControllerBase
     {
-        [HttpPost("create")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<TargetModel>> CreateTarget([FromBody] AgentDto agent)
@@ -55,11 +55,19 @@ namespace AgentRest.Controllers
         {
             var res = await agentService.Move(id, direction);
 
-            if (res == null)
+            try
             {
-                return NotFound("no agent to move");
+                if (res == null)
+                {
+                    return NotFound("no agent to move");
+                }
+                return Ok(res);
             }
-            return Ok(res);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
     }
 }

@@ -9,9 +9,9 @@ namespace AgentRest.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class TargetController(ITargetService targetService) : ControllerBase
+    public class targetsController(ITargetService targetService) : ControllerBase
     {
-        [HttpPost("create")]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<TargetModel>> CreateTarget([FromBody] TargetDto target)
@@ -59,7 +59,7 @@ namespace AgentRest.Controllers
             {
                 return NotFound("no target to move");
             }
-            return Ok(res);
+            return Ok();
         }
     }
 }

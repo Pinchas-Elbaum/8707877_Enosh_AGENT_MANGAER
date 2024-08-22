@@ -23,7 +23,7 @@ namespace AgentRest.Service
             TargetModel newTarget = new TargetModel();
             newTarget.Name = target.Name;
             newTarget.position = target.Position;
-            newTarget.Image = target.Photo_url;
+            newTarget.Image = target.PhotoUrl;
 
             await context.AddAsync(newTarget);
             await context.SaveChangesAsync();
@@ -54,11 +54,16 @@ namespace AgentRest.Service
 
         public async Task<TargetModel?> Move(int id, DirectionDto direction)
         {
+           
             var target = await GetTargetAsync(id);
+            if (target == null) {
+                return null;
+            }
             target.x += location[direction.Direction].Item1;
             target.y += location[direction.Direction].Item2;
             await context.SaveChangesAsync();
             return target;
+                
             
         }
 
