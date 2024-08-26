@@ -19,6 +19,7 @@ namespace AgentRest
             builder.Services.AddDbContext<ApplicationDbContext>();
             builder.Services.AddScoped<IAgentService, AgentService>();
             builder.Services.AddScoped<ITargetService, TargetService>();
+            builder.Services.AddScoped<ImissionService, MissionService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

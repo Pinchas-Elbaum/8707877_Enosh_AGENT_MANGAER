@@ -19,6 +19,7 @@ namespace AgentRest.Controllers
             try
             {
                 var newAgent = await agentService.CreateAgentAsync(agent);
+                
                 return Created("", newAgent);
             }
             catch (Exception ex) { return BadRequest(ex.Message); }
@@ -51,7 +52,7 @@ namespace AgentRest.Controllers
         [HttpPut("{id}/move")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<TargetModel>> Move(int id, [FromBody] DirectionDto direction)
+        public async Task<ActionResult<Dictionary<string, int>?>> Move(int id, [FromBody] DirectionDto direction)
         {
             var res = await agentService.Move(id, direction);
 
@@ -61,7 +62,8 @@ namespace AgentRest.Controllers
                 {
                     return NotFound("no agent to move");
                 }
-                return Ok(res);
+                return Ok();
+                   
             }
             catch (Exception ex)
             {

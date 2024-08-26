@@ -19,6 +19,7 @@ namespace AgentRest.Controllers
             try
             {
                 var newTarget = await targetService.CreateTargetAsync(target);
+                
                 return Created("", newTarget);
             }
             catch (Exception ex) { return BadRequest(ex.Message); }

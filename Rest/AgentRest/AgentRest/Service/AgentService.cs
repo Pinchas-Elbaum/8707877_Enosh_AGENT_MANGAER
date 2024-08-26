@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AgentRest.Service
 {
-    public class AgentService(ApplicationDbContext context) : IAgentService
+    public class AgentService(ApplicationDbContext context, ImissionService mission) : IAgentService
     {
         public Dictionary<string, Tuple<int, int>> location = new()
         {
@@ -22,7 +22,7 @@ namespace AgentRest.Service
         };
 
 
-        public async Task<int?> CreateAgentAsync(AgentDto agent)
+        public async Task<Dictionary<string, int?>> CreateAgentAsync(AgentDto agent)
         {
             AgentModel newAgent = new AgentModel();
             newAgent.NickName = agent.Nickname;
@@ -30,7 +30,8 @@ namespace AgentRest.Service
 
             await context.AddAsync(newAgent);
             await context.SaveChangesAsync();
-            return newAgent.Id;
+            Dictionary<string, int?> dict = new() { { "id", newAgent.Id } };
+            return dict;
         }
 
 
@@ -56,11 +57,12 @@ namespace AgentRest.Service
             newAgent.X = pin.x;
             newAgent.Y = pin.y;
             await context.SaveChangesAsync();
+            mission.OfferToOrder();
             return newAgent;
         }
 
 
-        public async Task<AgentModel?> Move(int id, DirectionDto direction)
+        public async Task<Dictionary<string, int>?> Move(int id, DirectionDto direction)
         {
             var agent = await GetAgentAsync(id);
             if (agent == null)
@@ -70,12 +72,24 @@ namespace AgentRest.Service
 
             if (agent.Status == AgentStatus.Activity)
             {
+                return null;
                 throw new InvalidOperationException("Status Agent: Activity");
+                  
             }
-            agent.X += location[direction.Direction].Item1;
-            agent.Y += location[direction.Direction].Item2;
+            var newX = agent.X + location[direction.Direction].Item1;
+            var newY = agent.Y + location[direction.Direction].Item2;
+
+            if (newX > 1000 || newY > 1000 || newX < 0 || newY < 0)
+            {
+                throw new InvalidOperationException($"cannot move out of range ({agent.X} {agent.Y}");  
+            }
+            agent.X = newX;
+            agent.Y = newY;
+            Dictionary<string, int> dict = new() { { "x", newX }, { "y",newY } };
+
             await context.SaveChangesAsync();
-            return agent;
+            mission.OfferToOrder();
+            return dict;
             
         }
     }

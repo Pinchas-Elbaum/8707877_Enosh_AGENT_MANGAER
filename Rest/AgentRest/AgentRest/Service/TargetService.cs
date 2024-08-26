@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AgentRest.Service
 {
-    public class TargetService(ApplicationDbContext context) : ITargetService
+    public class TargetService(ApplicationDbContext context, ImissionService mission) : ITargetService
     {
         public Dictionary<string, Tuple<int, int>> location = new()
         {
@@ -18,7 +18,7 @@ namespace AgentRest.Service
             {"sw", new (1, 1) },
             {"nw", new (-1, 1) }
         };
-        public async Task<int?> CreateTargetAsync(TargetDto target)
+        public async Task<Dictionary<string,int?>> CreateTargetAsync(TargetDto target)
         {
             TargetModel newTarget = new TargetModel();
             newTarget.Name = target.Name;
@@ -27,7 +27,8 @@ namespace AgentRest.Service
 
             await context.AddAsync(newTarget);
             await context.SaveChangesAsync();
-            return newTarget.Id;  
+            Dictionary<string, int?> dict = new() { { "id", newTarget.Id } };
+            return dict;  
         }
 
         public async Task<TargetModel?> DeleteTargetAsync(int id)
@@ -53,18 +54,24 @@ namespace AgentRest.Service
         }
 
         public async Task<TargetModel?> Move(int id, DirectionDto direction)
-        {
-           
+        {     
             var target = await GetTargetAsync(id);
             if (target == null) {
                 return null;
             }
-            target.x += location[direction.Direction].Item1;
-            target.y += location[direction.Direction].Item2;
+            var newX = target.X + location[direction.Direction].Item1;
+            var newY = target.Y + location[direction.Direction].Item2;
+
+            if (newX > 1000 || newY > 1000 || newX < 0 || newY < 0)
+            {
+                throw new InvalidOperationException($"cannot move out of range ({target.X} {target.Y}");
+            }
+            target.X = newX;
+            target.Y = newY;
+
             await context.SaveChangesAsync();
-            return target;
-                
-            
+            mission.OfferToOrder();
+            return target;      
         }
 
         public async Task<TargetModel?> SetPrimaryLocation(int id, PinDto pin)
@@ -74,11 +81,11 @@ namespace AgentRest.Service
             {
                 return null;
             }
-            newTarget.x = pin.x;
-            newTarget.y = pin.y;    
+            newTarget.X = pin.x;
+            newTarget.Y = pin.y;    
             await context.SaveChangesAsync();
+            mission.OfferToOrder();
             return newTarget;
-
         }
     }
 }

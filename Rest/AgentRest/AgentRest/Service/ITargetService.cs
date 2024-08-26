@@ -5,7 +5,7 @@ namespace AgentRest.Service
 {
     public interface ITargetService
     {
-        Task<int?> CreateTargetAsync(TargetDto target);
+        Task<Dictionary<string, int?>> CreateTargetAsync(TargetDto target);
         Task<TargetModel?> GetTargetAsync(int id);
         Task<TargetModel?> DeleteTargetAsync(int id);
         Task<List<TargetModel?>> GetAllTargetsAsync();
