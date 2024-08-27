@@ -9,6 +9,6 @@ namespace AgentRest.Service
         Task<AgentModel?> GetAgentAsync(int id);
         Task<List<AgentModel?>> GetAllAgentsAsync();
         Task<AgentModel?> SetPrimaryLocation(int id, PinDto pin);
-        Task< Dictionary<string, int>?> Move(int id, DirectionDto direction);
+        Task<AgentModel?> Move(int id, DirectionDto direction);
     }
 }

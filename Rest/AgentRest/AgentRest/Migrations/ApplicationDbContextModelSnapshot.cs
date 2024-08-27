@@ -52,6 +52,22 @@ namespace AgentRest.Migrations
                     b.ToTable("Agents");
                 });
 
+            modelBuilder.Entity("AgentRest.Models.KillsModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Eliminated")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Kills");
+                });
+
             modelBuilder.Entity("AgentRest.Models.MissionModel", b =>
                 {
                     b.Property<int>("Id")
@@ -100,18 +116,18 @@ namespace AgentRest.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("X")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Y")
+                        .HasColumnType("int");
+
                     b.Property<string>("position")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("x")
-                        .HasColumnType("int");
-
-                    b.Property<int>("y")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

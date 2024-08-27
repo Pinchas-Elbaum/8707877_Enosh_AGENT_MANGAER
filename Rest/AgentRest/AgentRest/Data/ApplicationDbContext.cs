@@ -18,6 +18,7 @@ namespace AgentsApi.Data
         public DbSet<MissionModel> Missions { get; set; }
         public DbSet<AgentModel> Agents { get; set; }
         public DbSet<TargetModel> Targets { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

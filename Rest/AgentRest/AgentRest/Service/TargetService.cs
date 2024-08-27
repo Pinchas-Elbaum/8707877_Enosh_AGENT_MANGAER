@@ -70,7 +70,7 @@ namespace AgentRest.Service
             target.Y = newY;
 
             await context.SaveChangesAsync();
-            mission.OfferToOrder();
+            await mission.OfferToOrder();
             return target;      
         }
 

@@ -62,7 +62,7 @@ namespace AgentRest.Service
         }
 
 
-        public async Task<Dictionary<string, int>?> Move(int id, DirectionDto direction)
+        public async Task<AgentModel?> Move(int id, DirectionDto direction)
         {
             var agent = await GetAgentAsync(id);
             if (agent == null)
@@ -85,11 +85,11 @@ namespace AgentRest.Service
             }
             agent.X = newX;
             agent.Y = newY;
-            Dictionary<string, int> dict = new() { { "x", newX }, { "y",newY } };
+            
 
             await context.SaveChangesAsync();
-            mission.OfferToOrder();
-            return dict;
+            await mission.OfferToOrder();
+            return agent;
             
         }
     }

@@ -30,12 +30,12 @@ namespace AgentRest.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<MissionModel>> UpdatStatus(int id, [FromBody] int status)
+        public async Task<ActionResult<MissionModel>> Updatstatus(int id)
         {
-            var res = await mission.UpdateStatus(id, status);
+            var res = await mission.UpdateStatus(id);
             if (res == null)
             {
-                return NotFound("no target to move");
+                return NotFound("no target to Team");
             }
             return Ok(res);
         }

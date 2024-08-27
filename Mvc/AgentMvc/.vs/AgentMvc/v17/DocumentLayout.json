@@ -1,0 +1,200 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\controllers\\missioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\viewmodel\\missionspropertis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\viewmodel\\missionspropertis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\viewmodel\\targetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\viewmodel\\targetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\viewmodel\\agentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\viewmodel\\agentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\viewmodel\\missionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\viewmodel\\missionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\views\\mission\\team.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\views\\mission\\team.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\views\\mission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\views\\mission\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|c:\\users\\1\\source\\repos\\agentsexam\\mvc\\agentmvc\\agentmvc\\agentmvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{94C7250A-BD4F-481A-A188-3C10D1D548E8}|AgentMvc\\AgentMvc.csproj|solutionrelative:agentmvc\\agentmvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MissionsPropertis.cs",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\MissionsPropertis.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\MissionsPropertis.cs",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\MissionsPropertis.cs",
+              "RelativeToolTip": "AgentMvc\\ViewModel\\MissionsPropertis.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwAQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T14:31:28.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Team.cshtml",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\Team.cshtml",
+              "RelativeDocumentMoniker": "AgentMvc\\Views\\Mission\\Team.cshtml",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\Team.cshtml",
+              "RelativeToolTip": "AgentMvc\\Views\\Mission\\Team.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T11:17:25.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Program.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\Program.cs",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Program.cs",
+              "RelativeToolTip": "AgentMvc\\Program.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T10:58:19.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\Index.cshtml",
+              "RelativeDocumentMoniker": "AgentMvc\\Views\\Mission\\Index.cshtml",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Views\\Mission\\Index.cshtml",
+              "RelativeToolTip": "AgentMvc\\Views\\Mission\\Index.cshtml",
+              "ViewState": "AQIAADIAAAAAAAAAAAAAADoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T10:59:19.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MissionController.cs",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MissionController.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\Controllers\\MissionController.cs",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\Controllers\\MissionController.cs",
+              "RelativeToolTip": "AgentMvc\\Controllers\\MissionController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwBQAAACrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T09:16:02.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TargetModel.cs",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\TargetModel.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\TargetModel.cs",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\TargetModel.cs",
+              "RelativeToolTip": "AgentMvc\\ViewModel\\TargetModel.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T09:13:10.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AgentModel.cs",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\AgentModel.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\AgentModel.cs",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\AgentModel.cs",
+              "RelativeToolTip": "AgentMvc\\ViewModel\\AgentModel.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T09:12:39.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MissionModel.cs",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\MissionModel.cs",
+              "RelativeDocumentMoniker": "AgentMvc\\ViewModel\\MissionModel.cs",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\ViewModel\\MissionModel.cs",
+              "RelativeToolTip": "AgentMvc\\ViewModel\\MissionModel.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABIAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T09:07:26.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AgentMvc.csproj",
+              "DocumentMoniker": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\AgentMvc.csproj",
+              "RelativeDocumentMoniker": "AgentMvc\\AgentMvc.csproj",
+              "ToolTip": "C:\\Users\\1\\source\\repos\\AgentsExam\\Mvc\\AgentMvc\\AgentMvc\\AgentMvc.csproj",
+              "RelativeToolTip": "AgentMvc\\AgentMvc.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-26T09:01:08.242Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 74,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

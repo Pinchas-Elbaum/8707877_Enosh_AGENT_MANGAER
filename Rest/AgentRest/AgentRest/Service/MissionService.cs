@@ -44,10 +44,10 @@ namespace AgentRest.Service
             return mission;
         }
 
-        public async void OfferToOrder()
+        public async Task OfferToOrder()
         {
-            var targets = await context.Targets.Select(t => t).ToListAsync();
-            var agents = await context.Agents.Select(a => a).ToListAsync();
+            var targets = await context.Targets.Where(t => t.Status == TargetStatus.Live).ToListAsync();
+            var agents = await context.Agents.Where(a => a.Status == AgentStatus.Dormant).ToListAsync();
             foreach (var target in targets)
             {
                 foreach (var agent in agents)
@@ -67,11 +67,7 @@ namespace AgentRest.Service
             }
         }
 
-        public async Task<MissionModel> Update(int missionId)
-        {
-            var mission = await GetMission(missionId);
-            return mission;
-        }
+        
 
         public async Task UpdateMissionsAsync()
         {
@@ -84,9 +80,11 @@ namespace AgentRest.Service
                 var distance = GetDistance(target, agent);
                 if (distance == 0)
                 {
+                    
                     agent.Status = 0;
                     mission.Status = MissionStatus.Done;
-                    context.Targets.Remove(target);
+                    mission.ActualExecutionTime = DateTime.Now;
+                    target.Status = TargetStatus.Eliminated;
                     await context.SaveChangesAsync();
                 }
                 if (target.X > agent.X)
@@ -115,27 +113,27 @@ namespace AgentRest.Service
 
         }
 
-        public async Task<MissionModel?> UpdateStatus(int status, int missionId)
+        public async Task<MissionModel?> UpdateStatus(int missionId)
         {
             var model = await GetMission(missionId);  
+            
             if (model == null)
             {
-
                 return null;
             }
-            switch (status)
+            var agent = await agentService.GetAgentAsync(model.AgentId);
+            var target = await targetService.GetTargetAsync(model.TargetId);
+
+            if (agent.Status == AgentStatus.Activity || target.Status == TargetStatus.Eliminated || target.Status == TargetStatus.Persecuted)
             {
-                case 0:
-                    model.Status = MissionStatus.Suggestion;
-                    break;
-                case 1:
-                    model.Status = MissionStatus.LinkedToTask;
-                    break;
-                case 2:
-                    model.Status = MissionStatus.Done;
-                    break;
+                return null;
             }
-            context.SaveChangesAsync();
+
+            model.Status = MissionStatus.LinkedToTask;
+            agent.Status = AgentStatus.Activity;
+            target.Status = TargetStatus.Persecuted;
+            model.TimeLeft = GetDistance(target, agent);
+            await context.SaveChangesAsync();
             return model;
             
         }
