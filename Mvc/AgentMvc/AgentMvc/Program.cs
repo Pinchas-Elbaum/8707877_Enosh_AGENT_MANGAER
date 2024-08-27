@@ -1,3 +1,5 @@
+using AgentMvc.Services;
+
 namespace AgentMvc
 {
     public class Program
@@ -6,6 +8,12 @@ namespace AgentMvc
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddHttpClient();
+            builder.Services.AddScoped<MissionService>();
+
+            builder.Services.AddScoped<AgentService>();
+            builder.Services.AddScoped<TargetService>();
+
+            builder.Services.AddScoped<MissionPropertisService>();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

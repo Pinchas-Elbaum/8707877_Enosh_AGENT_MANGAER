@@ -1,4 +1,5 @@
-﻿using AgentMvc.ViewModel;
+﻿using AgentMvc.Services;
+using AgentMvc.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -7,23 +8,17 @@ using System.Text.Json;
 
 namespace AgentMvc.Controllers
 {
-    public class MissionController(IHttpClientFactory clientFactory) : Controller
+    public class MissionController(IHttpClientFactory clientFactory, MissionPropertisService missionPropertis) : Controller
     {
         private readonly string baseUrl = "https://localhost:7116/missions";
         public async Task<IActionResult> Index()
         {
-            var httpClient = clientFactory.CreateClient();
-            var result = await httpClient.GetAsync(baseUrl);
-            if (result.IsSuccessStatusCode)
-            {
-                var content = await result.Content.ReadAsStringAsync();
-
-                List<MissionModel>? missions = JsonSerializer.Deserialize<List<MissionModel>>(content, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                var suggestionMissions = missions.Where(m => m.Status == MissionStatus.Suggestion).ToList();
-                return View(suggestionMissions);
+            var mp = await missionPropertis.GetMissionsProperties();
+            if (mp != null)
+            {  
+                return View(mp);
             }
             return RedirectToAction("Index", "Home");
-
         }
        
         
@@ -39,3 +34,4 @@ namespace AgentMvc.Controllers
         }
     }
 }
+

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AgentMvc.ViewModel.MissionModel>
+﻿@model IEnumerable<AgentMvc.ViewModel.MissionsPropertis>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,22 +13,31 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AgentId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TargetId)
+                @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TimeLeft)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ActualExecutionTime)
+                @Html.DisplayNameFor(model => model.Distance)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Status)
+                @Html.DisplayNameFor(model => model.NickName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetY)
             </th>
             <th></th>
         </tr>
@@ -37,27 +46,36 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AgentId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TargetId)
+                @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TimeLeft)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ActualExecutionTime)
+                @Html.DisplayFor(modelItem => item.Distance)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status)
+                @Html.DisplayFor(modelItem => item.NickName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetY)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Team", "Team", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Team", "Team", new {  id=item.id })
             </td>
         </tr>
 }
